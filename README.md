@@ -16,7 +16,7 @@ That's exactly the purpose of this library, is to pass custom options alongside 
 The library was designed to be added without further modification, you'll still use the same `HttpClient` but with one additional augment
 the `configure` method that takes the default options before choosing the HTTP method.
 
-First of all you need to create you custom options object
+1. First of all you need to create you custom options object
 
 ```
 interface CustomOptions {
@@ -24,7 +24,7 @@ interface CustomOptions {
 	defaultAuth: boolean;
 }
 ```
-in `app.module` you need to import `RequestOptionsModule` and add it to `imports` list in `NgModule`
+2. in `app.module` you need to import `RequestOptionsModule` and add it to `imports` list in `NgModule`
 
 ```
 import { RequestOptionsModule } from  '@ezzabuzaid/ngx-request-options';
@@ -41,18 +41,18 @@ import { RequestOptionsModule } from  '@ezzabuzaid/ngx-request-options';
 })
 
   
-// Add those lines as they are to end of the file
+// Add those lines as they are
 declare  module  '@angular/common/http/http' {
 	// Augment HttpClient with the added `configure` method
 	export  interface  HttpClient {
 		/**
 		* Configure request options.
 		*/
-		configure(options: Partial<IRequestOptions>): HttpClient;
+		configure(options: Partial<CustomOptions>): HttpClient;
 	}
 }
 ```
-// Inject `HttpClient` from `@angular/common/http`
+3. Inject `HttpClient` from `@angular/common/http` in a class then call the new `configure` method
 ```
 @Injectable()
 export  class  MyService {
@@ -64,6 +64,7 @@ export  class  MyService {
 	}
 }
 ```
+4. into an interceptor
 
 ## Developer
 ##### [Ezzabuzaid](mailto:ezzabuzaid@hotmail.com)
@@ -74,6 +75,6 @@ export  class  MyService {
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDY0MTcxNDcsLTgyMTUxODI3NSwtMT
-kzNjcwMDc3MF19
+eyJoaXN0b3J5IjpbMTg1ODc4NzgwNywtODIxNTE4Mjc1LC0xOT
+M2NzAwNzcwXX0=
 -->
