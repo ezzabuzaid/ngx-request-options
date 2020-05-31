@@ -13,7 +13,15 @@ That's exactly the purpose of this library, is to pass custom options alongside 
 `npm install @ezzabuzaid/ngx-request-options`
 
 ### Usage
+First of all you need to create you custom options object
+```
+interface CustomOptions{
+	defaultUrl:boolean,
+}
+```
 
+
+`import { RequestOptionsModule } from  '@ezzabuzaid/ngx-request-options';`
 
 
 ## Developer
@@ -25,5 +33,6 @@ That's exactly the purpose of this library, is to pass custom options alongside 
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzY3MDA3NzBdfQ==
+eyJoaXN0b3J5IjpbLTE0ODUxMzM1NDIsLTE5MzY3MDA3NzBdfQ
+==
 -->
