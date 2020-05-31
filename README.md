@@ -86,7 +86,10 @@ export class UrlInterceptor  implements  HttpInterceptor {
 		* Get an option from the options that was assigned to the request
 	2.  `set(request: HttpRequest<any>, data: Partial<T>)` 
 		* Assign an options to a request
-	3. 
+	3. delete(request: HttpRequest<any>)
+		* Delete the request options
+	4. clone(request: HttpRequest<any>, requestMetadata)
+		* clone the request with
 
 
 ## Developer
@@ -98,6 +101,6 @@ export class UrlInterceptor  implements  HttpInterceptor {
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTA0MDM0MzYsLTgyMTUxODI3NSwtMT
+eyJoaXN0b3J5IjpbLTEzOTU2MTMxMzgsLTgyMTUxODI3NSwtMT
 kzNjcwMDc3MF19
 -->
