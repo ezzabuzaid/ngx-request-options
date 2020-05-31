@@ -4,8 +4,7 @@
   },
   "peerDependencies": {
     "@angular/core": "~9.1.4",
-    "@angular/common": "~9.1.4",
-    "tslib": "^1.10.0"
+    "@angular/common": "~9.1.4"
   },
   "name": "@ezzabuzaid/ngx-request-options",
   "version": "0.0.4",
