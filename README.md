@@ -1,8 +1,11 @@
 # Request Options
   [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ezzabuzaid/ngx-request-options/pulls) [![Downloads per month](https://flat.badgen.net/npm/dm/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) [![Version](https://flat.badgen.net/npm/v/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) [![License](https://flat.badgen.net/npm/license/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) 
 
-Angular has an incridi
-Sometimes you might want to pass data to a specific interceptor
+An elegant way to pass data to a specific interceptor
+
+Imagine that you want to fetch 
+
+
 
 ## Developer
 ##### [Ezzabuzaid](mailto:ezzabuzaid@hotmail.com)
@@ -13,5 +16,5 @@ Sometimes you might want to pass data to a specific interceptor
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyODIwMDQ1NF19
+eyJoaXN0b3J5IjpbMTA1OTc1ODc3Nl19
 -->
