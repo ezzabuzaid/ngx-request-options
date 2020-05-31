@@ -3,7 +3,11 @@
 
 #### An elegant way to pass custom options to interceptor from http client
 
-In a most of the projects you'll have default url for your API's gateway that prefexd before sending the request to backend to avoid adding it to everytime  and for some reasons you may have a request that doesn't need want to use the default url, so in this case you stuck to find a way to do this
+In a most of the projects you'll have default url for your API's gateway that prefexd before sending the request to backend to avoid adding it to everytime  and for some reasons you may have a request that doesn't need the default url, so in this case you need a way to not prefixing the url.
+
+that's just one case
+
+That's exactly the purpose of this library, is to pass custom options alongside the request and perform specifc logic depend on it.
 
 
 ## Developer
@@ -15,5 +19,5 @@ In a most of the projects you'll have default url for your API's gateway that pr
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0MDMyNTEwMF19
+eyJoaXN0b3J5IjpbMTM2MjMwNTAwM119
 -->
