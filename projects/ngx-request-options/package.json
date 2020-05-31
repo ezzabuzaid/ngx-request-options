@@ -1,6 +1,9 @@
 {
   "name": "ngx-request-options",
   "version": "0.0.1",
+  "dependencies": {
+    "tslib": "^1.10.0"
+  },
   "peerDependencies": {
     "@angular/core": "~9.1.4",
     "@angular/common": "~9.1.4",

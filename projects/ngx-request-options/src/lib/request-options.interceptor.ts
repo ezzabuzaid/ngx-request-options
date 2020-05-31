@@ -3,7 +3,8 @@ import { Inject, Injectable, Optional } from '@angular/core';
 import { Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
 import { RequestOptions } from './request-options.service';
-import { IRequestOptionsInterceptor, ModifiableInterceptor, REQUEST_OPTIONS_DEFAULT } from './types';
+import { IRequestOptionsInterceptor, ModifiableInterceptor, REQUEST_OPTIONS_DEFAULT, Partial } from './types';
+
 
 @Injectable()
 export class RequestOptionsInterceptor implements IRequestOptionsInterceptor, ModifiableInterceptor {

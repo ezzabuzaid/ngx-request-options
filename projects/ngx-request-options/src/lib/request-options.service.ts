@@ -1,5 +1,6 @@
 import { HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Partial } from './types';
 
 type Parameter<T extends (args: any) => any> = T extends (args: infer P) => any ? P : never;
 
@@ -38,7 +39,7 @@ export class RequestOptions<T> {
     }
 
     /**
-     * Sometime you need to call request.clone() to assign new values to request payload aka metadata
+     * Sometimes you need to call request.clone() to assign new values to request payload aka metadata
      * thus you need to reassign the options again to the cloned request otherwise the options will lost
      *
      * @param oldRequest the previously used request

@@ -13,3 +13,7 @@ export interface IRequestOptionsInterceptor extends HttpInterceptor {
      */
     configure: (options: any) => void;
 }
+
+export type Partial<T> = {
+    [P in keyof T]?: T[P];
+};

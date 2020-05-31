@@ -1,7 +1,7 @@
 import { HttpClient, HttpHandler, HttpInterceptor, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Injectable, Injector } from '@angular/core';
 import { RequestOptionsInterceptor } from './request-options.interceptor';
-import { ModifiableInterceptor } from './types';
+import { ModifiableInterceptor, Partial } from './types';
 
 @Injectable()
 export class HttpService<T> extends HttpClient {

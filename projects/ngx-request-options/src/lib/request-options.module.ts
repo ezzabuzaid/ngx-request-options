@@ -1,7 +1,8 @@
 import { HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { HttpService, } from './http.service';
-import { RequestOptionsInterceptor, REQUEST_OPTIONS_DEFAULT } from './request-options.interceptor';
+import { RequestOptionsInterceptor } from './request-options.interceptor';
+import { REQUEST_OPTIONS_DEFAULT } from './types';
 
 @NgModule()
 export class RequestOptionsModule {
