@@ -53,6 +53,24 @@ declare  module  '@angular/common/http/http' {
 }
 
 // Inject the `HttpClient` from `@angular/common/http`
+  
+
+@Injectable()
+
+export  class  MyService {
+
+  
+
+constructor(private  http: HttpClient) { }
+
+  
+
+getData() {
+	return  this.http
+	.configure({ defaultUrl:  false })
+	.get<SelectOption[]>('lookups/nationalities');
+	}
+}
 ```
 
 ## Developer
@@ -64,6 +82,6 @@ declare  module  '@angular/common/http/http' {
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyNDEyMTgyMCwtODIxNTE4Mjc1LC0xOT
-M2NzAwNzcwXX0=
+eyJoaXN0b3J5IjpbODIyODQ1NjQwLC04MjE1MTgyNzUsLTE5Mz
+Y3MDA3NzBdfQ==
 -->
