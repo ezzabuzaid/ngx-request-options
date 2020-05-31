@@ -1,29 +1,26 @@
 {
-  "name": "angular-packages",
-  "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "prepublish": "npm run test && npm run build"
   },
-  "private": true,
   "dependencies": {
-    "@angular/animations": "~9.0.2",
-    "@angular/common": "~9.0.2",
-    "@angular/compiler": "~9.0.2",
-    "@angular/core": "~9.0.2",
-    "@angular/forms": "~9.0.2",
-    "@angular/platform-browser": "~9.0.2",
-    "@angular/platform-browser-dynamic": "~9.0.2",
-    "@angular/router": "~9.0.2",
+    "@angular/core": "~9.1.4",
+    "@angular/common": "~9.1.4",
+    "@angular/compiler": "~9.1.4",
+    "@angular/platform-browser": "~9.1.4",
+    "@angular/platform-browser-dynamic": "~9.1.4",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~0.900.7",
+    "@angular-devkit/build-ng-packagr": "~0.900.7",
     "@angular/cli": "~9.0.3",
     "@angular/compiler-cli": "~9.0.2",
     "@angular/language-service": "~9.0.2",
@@ -38,9 +35,34 @@
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
+    "ng-packagr": "^9.0.0",
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
     "typescript": "~3.7.5"
-  }
+  },
+  "name": "@ezzabuzaid/ngx-request-options",
+  "version": "0.0.1",
+  "bugs": {
+    "email": "ezzabuzaid@hotmail.com",
+    "url": "https://github.com/ezzabuzaid/ngx-request-options/issues"
+  },
+  "description": "Allows to pass custom options to http interceptors",
+  "keywords": [
+    "Angular",
+    "http",
+    "interceptor",
+    "interceptors",
+    "module augmentation",
+    "angular interceptors",
+    "angular interceptor"
+  ],
+  "author": {
+    "name": "ezzabuzaid",
+    "email": "ezzabuzaid@hotmail.com",
+    "url": "https://github.com/ezzabuzaid/"
+  },
+  "repository": "github:ezzabuzaid/ngx-request-options",
+  "private": false,
+  "license": "MIT"
 }
