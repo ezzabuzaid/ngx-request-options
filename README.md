@@ -81,7 +81,10 @@ export class UrlInterceptor  implements  HttpInterceptor {
 ```
 
 ### Api's
-1. clone
+* RequestOptions
+	1. 
+	2.  `set(request: HttpRequest<any>, data: Partial<T>)` 
+	3. 
 
 
 ## Developer
@@ -93,6 +96,6 @@ export class UrlInterceptor  implements  HttpInterceptor {
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMjczOTYwOCwtODIxNTE4Mjc1LC0xOT
+eyJoaXN0b3J5IjpbLTE0NTc3MTQ1NywtODIxNTE4Mjc1LC0xOT
 M2NzAwNzcwXX0=
 -->
