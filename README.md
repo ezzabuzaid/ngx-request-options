@@ -3,13 +3,16 @@
 
 #### An elegant way to pass custom options to interceptor from http client
 
-In a most of the projects you'll have default url for your API's gateway that prefexd before sending the request to backend to avoid adding it to everytime  and for some reasons you may have a request that doesn't need the default url, so in this case you need a way to not prefixing the url.
+In a most of the projects, you'll have default URL for your API's gateway that prefixed before sending the request to the backend to avoid adding it to every time and for some reasons you may have a request that doesn't need the default URL, so in this case, you need a way to not prefixing the URL.
 
 That's just one case, you may also have to not send the Authentication header with a request
 
-That's exactly the purpose of this library, is to pass custom options alongside the request and perform specifc logic depend on it.
+That's exactly the purpose of this library, is to pass custom options alongside the request and perform specific logic depend on it.
 
-### npm install @ezzabuzaid
+### installation
+`npm install @ezzabuzaid/ngx-request-options`
+
+
 
 
 ## Developer
@@ -21,5 +24,5 @@ That's exactly the purpose of this library, is to pass custom options alongside 
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMDExNDU3OF19
+eyJoaXN0b3J5IjpbLTQxNjMyMTE1OF19
 -->
