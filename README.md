@@ -3,7 +3,7 @@
 
 #### An elegant way to pass custom options to interceptor from http client
 
-In a mo 
+In a most of the projects you'll have default url for your API's gateway that prefexd along
 
 
 ## Developer
@@ -15,5 +15,5 @@ In a mo
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NDUwODgwOF19
+eyJoaXN0b3J5IjpbLTIwMTEyNTE1NTddfQ==
 -->
