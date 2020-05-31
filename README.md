@@ -3,7 +3,7 @@
 
 #### An elegant way to pass custom options to interceptor from http client
 
-In a most of the projects you'll have default url for your API's gateway that prefexd before sending the request to backend to avoid adding it 
+In a most of the projects you'll have default url for your API's gateway that prefexd before sending the request to backend to avoid adding it to everytime  and for some reasons you may have a request that doesn't need want to use the default url, so in this case you stuck to find a way to do this
 
 
 ## Developer
@@ -15,5 +15,5 @@ In a most of the projects you'll have default url for your API's gateway that pr
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDQwNjkzODJdfQ==
+eyJoaXN0b3J5IjpbLTg0MDMyNTEwMF19
 -->
