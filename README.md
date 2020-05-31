@@ -27,20 +27,14 @@ in app.module you need to import `RequestOptionsModule` and add it to `imports` 
 ```
 import { RequestOptionsModule } from  '@ezzabuzaid/ngx-request-options';
 
-RequestOptionsModule.forRoot<CustomOptions>({
-	defaultAuth: true;
-	defaultUrl: true
-}),
-
-  
-
 @NgModule({
-imports: [
-HttpClientModule,
-RequestOptionsModule.forRoot<IRequestOptions>(new  IRequestOptions())
-
-]
-
+	imports: [
+			HttpClientModule,
+			RequestOptionsModule.forRoot<CustomOptions>({
+				defaultAuth: true;
+				defaultUrl: true
+			})
+		]
 })
 ```
 
@@ -53,5 +47,5 @@ RequestOptionsModule.forRoot<IRequestOptions>(new  IRequestOptions())
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0Nzc2MDU0OSwtMTkzNjcwMDc3MF19
+eyJoaXN0b3J5IjpbLTgyMTUxODI3NSwtMTkzNjcwMDc3MF19
 -->
