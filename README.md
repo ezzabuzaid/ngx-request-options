@@ -13,6 +13,8 @@ That's exactly the purpose of this library, is to pass custom options alongside 
 `npm install @ezzabuzaid/ngx-request-options`
 
 ### Usage
+The idea was
+
 First of all you need to create you custom options object
 
 ex.
@@ -23,7 +25,7 @@ interface CustomOptions {
 }
 ```
 in app.module you need to import `RequestOptionsModule` and add it to `imports` list in `NgModule`
-RequestOptionsModule.forRoot() takes one argument which is the default options 
+
 ```
 import { RequestOptionsModule } from  '@ezzabuzaid/ngx-request-options';
 
@@ -31,6 +33,7 @@ import { RequestOptionsModule } from  '@ezzabuzaid/ngx-request-options';
 	imports: [
 			HttpClientModule,
 			RequestOptionsModule.forRoot<CustomOptions>({
+				// Default options to be applied on all requests
 				defaultAuth: true;
 				defaultUrl: true
 			})
@@ -47,6 +50,6 @@ import { RequestOptionsModule } from  '@ezzabuzaid/ngx-request-options';
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODMyMDE3OCwtODIxNTE4Mjc1LC0xOT
-M2NzAwNzcwXX0=
+eyJoaXN0b3J5IjpbLTEwNDE3Njc3OTgsLTgyMTUxODI3NSwtMT
+kzNjcwMDc3MF19
 -->
