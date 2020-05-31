@@ -13,7 +13,7 @@ That's exactly the purpose of this library, is to pass custom options alongside 
 `npm install @ezzabuzaid/ngx-request-options`
 
 ### Usage
-The idea was
+The library was designed to be added without further modification, you'll still use the same `HttpClient` but with one additional aug
 
 First of all you need to create you custom options object
 
@@ -50,6 +50,6 @@ import { RequestOptionsModule } from  '@ezzabuzaid/ngx-request-options';
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDE3Njc3OTgsLTgyMTUxODI3NSwtMT
-kzNjcwMDc3MF19
+eyJoaXN0b3J5IjpbMTUxMTAzNDI5MSwtODIxNTE4Mjc1LC0xOT
+M2NzAwNzcwXX0=
 -->
