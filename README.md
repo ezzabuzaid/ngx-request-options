@@ -82,8 +82,10 @@ export class UrlInterceptor  implements  HttpInterceptor {
 
 ### Api's
 * RequestOptions
-	1. 
+	1.  `get(request: HttpRequest<any>, option: keyof  T)`
+		* Get an option from the options that was assigned to the request
 	2.  `set(request: HttpRequest<any>, data: Partial<T>)` 
+		* Assign an options to a request
 	3. 
 
 
@@ -96,6 +98,6 @@ export class UrlInterceptor  implements  HttpInterceptor {
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTc3MTQ1NywtODIxNTE4Mjc1LC0xOT
-M2NzAwNzcwXX0=
+eyJoaXN0b3J5IjpbLTEyMTA0MDM0MzYsLTgyMTUxODI3NSwtMT
+kzNjcwMDc3MF19
 -->
