@@ -14,14 +14,23 @@ That's exactly the purpose of this library, is to pass custom options alongside 
 
 ### Usage
 First of all you need to create you custom options object
+
+ex.
 ```
-interface CustomOptions{
-	defaultUrl:boolean,
+interface CustomOptions {
+	defaultUrl:boolean;
+	defaultAuth: boolean;
 }
 ```
+in app.module you need to import `RequestOptionsModule`
 
+````
+import { RequestOptionsModule } from  '@ezzabuzaid/ngx-request-options';
 
-`import { RequestOptionsModule } from  '@ezzabuzaid/ngx-request-options';`
+RequestOptionsModule.forRoot<CustomOptions>({
+	defaultAuth: true;
+	defaultUrl: true
+}),
 
 
 ## Developer
@@ -33,6 +42,5 @@ interface CustomOptions{
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODUxMzM1NDIsLTE5MzY3MDA3NzBdfQ
-==
+eyJoaXN0b3J5IjpbMTMxMjk5NDA5MCwtMTkzNjcwMDc3MF19
 -->
