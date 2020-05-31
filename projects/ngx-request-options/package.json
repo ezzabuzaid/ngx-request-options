@@ -1,6 +1,4 @@
 {
-  "name": "ngx-request-options",
-  "version": "0.0.1",
   "dependencies": {
     "tslib": "^1.10.0"
   },
@@ -8,5 +6,29 @@
     "@angular/core": "~9.1.4",
     "@angular/common": "~9.1.4",
     "tslib": "^1.10.0"
-  }
+  },
+  "name": "@ezzabuzaid/ngx-request-options",
+  "version": "0.0.4",
+  "bugs": {
+    "email": "ezzabuzaid@hotmail.com",
+    "url": "https://github.com/ezzabuzaid/ngx-request-options/issues"
+  },
+  "description": "Allows to pass custom options to http interceptors",
+  "keywords": [
+    "Angular",
+    "http",
+    "interceptor",
+    "interceptors",
+    "module augmentation",
+    "angular interceptors",
+    "angular interceptor"
+  ],
+  "author": {
+    "name": "ezzabuzaid",
+    "email": "ezzabuzaid@hotmail.com",
+    "url": "https://github.com/ezzabuzaid/"
+  },
+  "repository": "github:ezzabuzaid/ngx-request-options",
+  "private": false,
+  "license": "MIT"
 }

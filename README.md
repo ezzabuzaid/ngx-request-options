@@ -31,18 +31,18 @@ import { RequestOptionsModule } from  '@ezzabuzaid/ngx-request-options';
 
 @NgModule({
 	imports: [
-			HttpClientModule,
-			RequestOptionsModule.forRoot<CustomOptions>({
-				// Default options to be applied on all requests
-				defaultAuth: true;
-				defaultUrl: true
-			})
+		HttpClientModule,
+		RequestOptionsModule.forRoot<CustomOptions>({
+			// Default options to be applied on all requests
+			defaultAuth: true;
+			defaultUrl: true
+		})
 		]
 })
 
   
 // Add those lines as they are
-declare  module  '@angular/common/http/http' {
+declare module '@angular/common/http/http' {
 	// Augment HttpClient with the added `configure` method
 	export  interface  HttpClient {
 		/**
@@ -55,8 +55,8 @@ declare  module  '@angular/common/http/http' {
 3. Inject `HttpClient` from `@angular/common/http` in a class then call the new `configure` method
 ```
 @Injectable()
-export  class  MyService {
-	constructor(private  http: HttpClient) { }
+export class MyService {
+	constructor(private http: HttpClient) { }
 	getData() {
 		return this.http
 			.configure({ defaultUrl:  false })
@@ -66,9 +66,9 @@ export  class  MyService {
 ```
 4. into an interceptor
 ```
-import { RequestOptions } from  '@ezzabuzaid/ngx-request-options';
+import { RequestOptions } from '@ezzabuzaid/ngx-request-options';
 @Injectable()
-export class UrlInterceptor  implements  HttpInterceptor {
+export class UrlInterceptor implements HttpInterceptor {
 	constructor(private requestOptions: RequestOptions<CustomOptions>) { }
 	intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 		let  url = request.url;

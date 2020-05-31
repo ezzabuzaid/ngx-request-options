@@ -4,8 +4,11 @@
     "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
+    "test-ci": "ng test --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "sync-readme": "cp ./README.md ./projects/ngx-request-options",
+    "package": "npm run build && cd ./dist/ngx-request-options",
     "prepublish": "npm run build"
   },
   "dependencies": {
@@ -42,7 +45,7 @@
     "typescript": "~3.7.5"
   },
   "name": "@ezzabuzaid/ngx-request-options",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "bugs": {
     "email": "ezzabuzaid@hotmail.com",
     "url": "https://github.com/ezzabuzaid/ngx-request-options/issues"
