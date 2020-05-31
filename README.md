@@ -86,26 +86,16 @@ export class UrlInterceptor  implements  HttpInterceptor {
 		* Get an option from the options that was assigned to the request
 	2.  `set(request: HttpRequest<any>, data: Partial<T>)` 
 		* Assign an options to a request
-	3. delete(request: HttpRequest<any>)
+	3. `delete(request: HttpRequest<any>)`
 		* Delete the request options
-	4. clone(request: HttpRequest<any>, requestMetadata)
+	4. `clone(request: HttpRequest<any>, requestMetadata)`
 		* Clone the request with new metadata and reassign the options to it
-	5. changeRequest(oldRequest: HttpRequest<any>, newRequest: HttpRequest<any>)
-		*  Sometime you need to call request.clone() to assign new values to request payload aka metadata thus you need to reassign the options again to the cloned request otherwise the options will lost
-* oldRequest the previously used request
+	5. `changeRequest(oldRequest: HttpRequest<any>, newRequest: HttpRequest<any>)`
+		*  Sometime you need to call request.clone() to assign new values to request payload aka metadata thus you need to reassign the options again to the cloned request otherwise the options will lost. call `RequestOptions.clone()` instead as shorter version
+		* `oldRequest` the previously used request
+		* `newRequest` the cloned request 
 
-/**
 
-*
-* 
-
-*
-
-* @param  
-
-* @param  newRequest the cloned request
-
-*/
 ## Developer
 ##### [Ezzabuzaid](mailto:ezzabuzaid@hotmail.com)
 - [GitHub](https://github.com/ezzabuzaid)
@@ -115,6 +105,6 @@ export class UrlInterceptor  implements  HttpInterceptor {
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTkxNzAzMzAsLTgyMTUxODI3NSwtMT
+eyJoaXN0b3J5IjpbLTE0NDY1NTczMzQsLTgyMTUxODI3NSwtMT
 kzNjcwMDc3MF19
 -->
