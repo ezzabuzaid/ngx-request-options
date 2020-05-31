@@ -91,7 +91,7 @@ export class UrlInterceptor  implements  HttpInterceptor {
 	4. `clone(request: HttpRequest<any>, requestMetadata)`
 		* Clone the request with new metadata and reassign the options to it
 	5. `changeRequest(oldRequest: HttpRequest<any>, newRequest: HttpRequest<any>)`
-		*  Sometime you need to call request.clone() to assign new values to request payload aka metadata thus you need to reassign the options again to the cloned request otherwise the options will lost. call `RequestOptions.clone()` instead as shorter version
+		*  Sometimes you need to call request.clone() to assign new values to request payload aka metadata thus you need to reassign the options again to the cloned request otherwise the options will be lost. call `RequestOptions.clone()` instead as shorter version
 		* `oldRequest` the previously used request
 		* `newRequest` the cloned request 
 
@@ -105,6 +105,6 @@ export class UrlInterceptor  implements  HttpInterceptor {
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDY1NTczMzQsLTgyMTUxODI3NSwtMT
-kzNjcwMDc3MF19
+eyJoaXN0b3J5IjpbMzE3MDA0NDYsLTE0NDY1NTczMzQsLTgyMT
+UxODI3NSwtMTkzNjcwMDc3MF19
 -->
