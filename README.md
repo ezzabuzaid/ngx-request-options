@@ -65,6 +65,30 @@ export  class  MyService {
 }
 ```
 4. into an interceptor
+```
+  
+
+import { RequestOptions } from  '@ezzabuzaid/ngx-request-options';
+
+@Injectable()
+
+export  class  UrlInterceptor  implements  HttpInterceptor {
+
+  
+
+constructor(private  requestOptions: RequestOptions<IRequestOptions>) { }
+
+  
+
+intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+let  url = request.url;
+if (this.requestOptions.get(request, 'DEFAULT_URL')) {
+url = environment.endpointUrl + request.url;
+}
+return  next.handle(this.requestOptions.clone(request, { url }));
+}
+}
+```
 
 ## Developer
 ##### [Ezzabuzaid](mailto:ezzabuzaid@hotmail.com)
@@ -75,6 +99,6 @@ export  class  MyService {
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1ODc4NzgwNywtODIxNTE4Mjc1LC0xOT
+eyJoaXN0b3J5IjpbLTM3NjkxNzU0MywtODIxNTE4Mjc1LC0xOT
 M2NzAwNzcwXX0=
 -->
