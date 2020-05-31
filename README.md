@@ -13,18 +13,18 @@ That's exactly the purpose of this library, is to pass custom options alongside 
 `npm install @ezzabuzaid/ngx-request-options`
 
 ### Usage
-The library was designed to be added without further modification, you'll still use the same `HttpClient` but with one additional aug
+The library was designed to be added without further modification, you'll still use the same `HttpClient` but with one additional augment
+the `configure` method that takes the default options before choosing the HTTP method.
 
 First of all you need to create you custom options object
 
-ex.
 ```
 interface CustomOptions {
 	defaultUrl:boolean;
 	defaultAuth: boolean;
 }
 ```
-in app.module you need to import `RequestOptionsModule` and add it to `imports` list in `NgModule`
+in `app.module` you need to import `RequestOptionsModule` and add it to `imports` list in `NgModule`
 
 ```
 import { RequestOptionsModule } from  '@ezzabuzaid/ngx-request-options';
@@ -50,6 +50,6 @@ import { RequestOptionsModule } from  '@ezzabuzaid/ngx-request-options';
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMTAzNDI5MSwtODIxNTE4Mjc1LC0xOT
+eyJoaXN0b3J5IjpbMTQxOTM5NDM5NCwtODIxNTE4Mjc1LC0xOT
 M2NzAwNzcwXX0=
 -->
