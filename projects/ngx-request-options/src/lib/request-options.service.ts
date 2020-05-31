@@ -11,7 +11,7 @@ export class RequestOptions<T> {
     /**
      * Retrive the option value
      */
-    get(request: HttpRequest<any>, option: keyof T) {
+    get<K extends keyof T>(request: HttpRequest<any>, option: K) {
         return this.optionsMap.get(request)[option];
     }
 

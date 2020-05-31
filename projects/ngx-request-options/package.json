@@ -7,7 +7,7 @@
     "@angular/common": "~9.1.4"
   },
   "name": "@ezzabuzaid/ngx-request-options",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "bugs": {
     "email": "ezzabuzaid@hotmail.com",
     "url": "https://github.com/ezzabuzaid/ngx-request-options/issues"
