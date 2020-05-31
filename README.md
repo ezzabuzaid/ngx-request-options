@@ -12,6 +12,7 @@ That's exactly the purpose of this library, is to pass custom options alongside 
 ### installation
 `npm install @ezzabuzaid/ngx-request-options`
 
+### Usage
 
 
 
@@ -24,5 +25,5 @@ That's exactly the purpose of this library, is to pass custom options alongside 
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxNjMyMTE1OF19
+eyJoaXN0b3J5IjpbLTE5MzY3MDA3NzBdfQ==
 -->
