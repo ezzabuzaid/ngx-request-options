@@ -23,7 +23,7 @@ interface CustomOptions {
 }
 ```
 in app.module you need to import `RequestOptionsModule` and add it to `imports` list in `NgModule`
-
+RequestOptionsModule.forRoot() takes one argument which is the default options 
 ```
 import { RequestOptionsModule } from  '@ezzabuzaid/ngx-request-options';
 
@@ -47,5 +47,6 @@ import { RequestOptionsModule } from  '@ezzabuzaid/ngx-request-options';
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMTUxODI3NSwtMTkzNjcwMDc3MF19
+eyJoaXN0b3J5IjpbLTEyODMyMDE3OCwtODIxNTE4Mjc1LC0xOT
+M2NzAwNzcwXX0=
 -->
