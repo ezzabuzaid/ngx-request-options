@@ -39,6 +39,20 @@ import { RequestOptionsModule } from  '@ezzabuzaid/ngx-request-options';
 			})
 		]
 })
+
+  
+// Add those lines as they are to end of the file
+declare  module  '@angular/common/http/http' {
+	// Augment HttpClient with the added `configure` method
+	export  interface  HttpClient {
+		/**
+		* Configure request options.
+		*/
+		configure(options: Partial<IRequestOptions>): HttpClient;
+	}
+}
+
+// Inject the `HttpClient` from `@angular/common/http`
 ```
 
 ## Developer
@@ -50,6 +64,6 @@ import { RequestOptionsModule } from  '@ezzabuzaid/ngx-request-options';
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxOTM5NDM5NCwtODIxNTE4Mjc1LC0xOT
+eyJoaXN0b3J5IjpbLTIyNDEyMTgyMCwtODIxNTE4Mjc1LC0xOT
 M2NzAwNzcwXX0=
 -->
