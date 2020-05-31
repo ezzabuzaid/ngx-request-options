@@ -51,24 +51,16 @@ declare  module  '@angular/common/http/http' {
 		configure(options: Partial<IRequestOptions>): HttpClient;
 	}
 }
-
-// Inject the `HttpClient` from `@angular/common/http`
-  
-
+```
+// Inject `HttpClient` from `@angular/common/http`
+```
 @Injectable()
-
 export  class  MyService {
-
-  
-
-constructor(private  http: HttpClient) { }
-
-  
-
-getData() {
-	return  this.http
-	.configure({ defaultUrl:  false })
-	.get<SelectOption[]>('lookups/nationalities');
+	constructor(private  http: HttpClient) { }
+	getData() {
+		return this.http
+			.configure({ defaultUrl:  false })
+			.get('endpoint');
 	}
 }
 ```
@@ -82,6 +74,6 @@ getData() {
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODIyODQ1NjQwLC04MjE1MTgyNzUsLTE5Mz
-Y3MDA3NzBdfQ==
+eyJoaXN0b3J5IjpbLTE1NDY0MTcxNDcsLTgyMTUxODI3NSwtMT
+kzNjcwMDc3MF19
 -->
