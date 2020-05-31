@@ -5,9 +5,11 @@
 
 In a most of the projects you'll have default url for your API's gateway that prefexd before sending the request to backend to avoid adding it to everytime  and for some reasons you may have a request that doesn't need the default url, so in this case you need a way to not prefixing the url.
 
-that's just one case
+That's just one case, you may also have to not send the Authentication header with a request
 
 That's exactly the purpose of this library, is to pass custom options alongside the request and perform specifc logic depend on it.
+
+### npm install @ezzabuzaid
 
 
 ## Developer
@@ -19,5 +21,5 @@ That's exactly the purpose of this library, is to pass custom options alongside 
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2MjMwNTAwM119
+eyJoaXN0b3J5IjpbMTMwMDExNDU3OF19
 -->
