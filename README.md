@@ -89,9 +89,23 @@ export class UrlInterceptor  implements  HttpInterceptor {
 	3. delete(request: HttpRequest<any>)
 		* Delete the request options
 	4. clone(request: HttpRequest<any>, requestMetadata)
-		* clone the request with
+		* Clone the request with new metadata and reassign the options to it
+	5. changeRequest(oldRequest: HttpRequest<any>, newRequest: HttpRequest<any>)
+		*  Sometime you need to call request.clone() to assign new values to request payload aka metadata thus you need to reassign the options again to the cloned request otherwise the options will lost
+* oldRequest the previously used request
 
+/**
 
+*
+* 
+
+*
+
+* @param  
+
+* @param  newRequest the cloned request
+
+*/
 ## Developer
 ##### [Ezzabuzaid](mailto:ezzabuzaid@hotmail.com)
 - [GitHub](https://github.com/ezzabuzaid)
@@ -101,6 +115,6 @@ export class UrlInterceptor  implements  HttpInterceptor {
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTU2MTMxMzgsLTgyMTUxODI3NSwtMT
+eyJoaXN0b3J5IjpbLTIxMTkxNzAzMzAsLTgyMTUxODI3NSwtMT
 kzNjcwMDc3MF19
 -->
