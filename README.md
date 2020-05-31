@@ -22,9 +22,9 @@ interface CustomOptions {
 	defaultAuth: boolean;
 }
 ```
-in app.module you need to import `RequestOptionsModule`
+in app.module you need to import `RequestOptionsModule` and add it to `imports` list in `NgModule`
 
-````
+```
 import { RequestOptionsModule } from  '@ezzabuzaid/ngx-request-options';
 
 RequestOptionsModule.forRoot<CustomOptions>({
@@ -32,6 +32,17 @@ RequestOptionsModule.forRoot<CustomOptions>({
 	defaultUrl: true
 }),
 
+  
+
+@NgModule({
+imports: [
+HttpClientModule,
+RequestOptionsModule.forRoot<IRequestOptions>(new  IRequestOptions())
+
+]
+
+})
+```
 
 ## Developer
 ##### [Ezzabuzaid](mailto:ezzabuzaid@hotmail.com)
@@ -42,5 +53,5 @@ RequestOptionsModule.forRoot<CustomOptions>({
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMjk5NDA5MCwtMTkzNjcwMDc3MF19
+eyJoaXN0b3J5IjpbLTk0Nzc2MDU0OSwtMTkzNjcwMDc3MF19
 -->
