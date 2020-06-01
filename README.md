@@ -81,12 +81,9 @@ export class UrlInterceptor implements HttpInterceptor {
 ```
 
 **Note** about `request.clone`,  Cloning the request will lose the associated options with it, hence you need to tell the `RequestOptions` that the original request will be garbage collected.
-The `request.clone` method return new request object with new metadata which mean that the original request will be lost.
+The `request.clone` method will return new request object with new metadata which means that the original request will be lost.
 
-`RequestOptions.clone` to resuce, using the `clone` method from `RequestOptions` will do the cloning implicitly and reassign the options again to the new Request object
-
-```
-t
+`RequestOptions.clone(request: HttpRequest, metadata)` to resuce, using the `clone` method from `RequestOptions` will do the cloning implicitly and reassign the options again to the new Request object
 
 
 ### Api's
@@ -114,7 +111,7 @@ t
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI1NDk4MjExLDE1NTI2MzcxNDAsMzE3MD
-A0NDYsLTE0NDY1NTczMzQsLTgyMTUxODI3NSwtMTkzNjcwMDc3
-MF19
+eyJoaXN0b3J5IjpbLTY5MDUwODY4MCwxNTUyNjM3MTQwLDMxNz
+AwNDQ2LC0xNDQ2NTU3MzM0LC04MjE1MTgyNzUsLTE5MzY3MDA3
+NzBdfQ==
 -->
