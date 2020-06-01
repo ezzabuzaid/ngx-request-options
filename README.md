@@ -80,7 +80,7 @@ export class UrlInterceptor implements HttpInterceptor {
 }
 ```
 
-### note
+**Note** about `request.clone`, sometimes you may want to clone the `HttpRequest` to alter the original url or headers, body, ...etc
 
 
 ### Api's
@@ -108,7 +108,7 @@ export class UrlInterceptor implements HttpInterceptor {
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzNTY5Mzg4OSwxNTUyNjM3MTQwLDMxNz
-AwNDQ2LC0xNDQ2NTU3MzM0LC04MjE1MTgyNzUsLTE5MzY3MDA3
-NzBdfQ==
+eyJoaXN0b3J5IjpbLTExODQ4NzUyNDAsMTU1MjYzNzE0MCwzMT
+cwMDQ0NiwtMTQ0NjU1NzMzNCwtODIxNTE4Mjc1LC0xOTM2NzAw
+NzcwXX0=
 -->
