@@ -80,7 +80,7 @@ export class UrlInterceptor implements HttpInterceptor {
 }
 ```
 
-**Note** about `request.clone`,  Cloning the request will lose the associated options
+**Note** about `request.clone`,  Cloning the request will lose the associated options with it, hence you need to tell the `RequestOptions` that the original request will be garbage collected
 
 sometimes you may want to clone the `HttpRequest` to alter the original url or headers, body, ...etc
 
@@ -110,7 +110,7 @@ sometimes you may want to clone the `HttpRequest` to alter the original url or h
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzgzMjczNDAsMTU1MjYzNzE0MCwzMT
-cwMDQ0NiwtMTQ0NjU1NzMzNCwtODIxNTE4Mjc1LC0xOTM2NzAw
-NzcwXX0=
+eyJoaXN0b3J5IjpbNjM3MjgzMTQ2LDE1NTI2MzcxNDAsMzE3MD
+A0NDYsLTE0NDY1NTczMzQsLTgyMTUxODI3NSwtMTkzNjcwMDc3
+MF19
 -->
