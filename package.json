@@ -1,22 +1,24 @@
 {
+  "name": "ngx",
+  "version": "0.0.6",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build",
     "test": "ng test",
-    "test-ci": "ng test --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "sync-readme": "cp ./README.md ./projects/ngx-request-options",
-    "package": "npm run build && cd ./dist/ngx-request-options",
-    "prepublish": "npm run build"
+    "e2e": "ng e2e"
   },
+  "private": true,
   "dependencies": {
-    "@angular/core": "~9.1.4",
-    "@angular/common": "~9.1.4",
-    "@angular/compiler": "~9.1.4",
-    "@angular/platform-browser": "~9.1.4",
-    "@angular/platform-browser-dynamic": "~9.1.4",
+    "@angular/animations": "~9.0.2",
+    "@angular/common": "~9.0.2",
+    "@angular/compiler": "~9.0.2",
+    "@angular/core": "~9.0.2",
+    "@angular/forms": "~9.0.2",
+    "@angular/platform-browser": "~9.0.2",
+    "@angular/platform-browser-dynamic": "~9.0.2",
+    "@angular/router": "~9.0.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
