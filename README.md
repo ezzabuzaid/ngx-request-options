@@ -4,12 +4,11 @@
 ### An elegant way to pass custom options through interceptor from the HTTP client
 
 In a most of the projects, you'll have default URL for your API's gateway that prefixed before sending the request to the backend to avoid adding it to every time and for some reasons you may have a request that doesn't need the default URL, so in this case, you need a way to not prefixing the URL.
-
-That's just one case, you may also have to not send the Authentication header with a request
+You may also have to not send the Authentication header with a request
 
 That's exactly the purpose of this library, is to pass custom options alongside the request and perform specific logic depend on it.
 
-### installation
+### Installation
 `npm install @ezzabuzaid/ngx-request-options`
 
 ### Usage
@@ -52,6 +51,8 @@ declare module '@angular/common/http/http' {
 	}
 }
 ```
+Please make sure that the you call the `forRoot()`, and to avoid any new data
+
 3. Inject `HttpClient` from `@angular/common/http` in a class then call the new `configure` method
 ```
 @Injectable()
@@ -111,7 +112,7 @@ The `request.clone` method will return new request object with new metadata whic
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5MDUwODY4MCwxNTUyNjM3MTQwLDMxNz
+eyJoaXN0b3J5IjpbMTcxMTIyNDI2NywxNTUyNjM3MTQwLDMxNz
 AwNDQ2LC0xNDQ2NTU3MzM0LC04MjE1MTgyNzUsLTE5MzY3MDA3
 NzBdfQ==
 -->
