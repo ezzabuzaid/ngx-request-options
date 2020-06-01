@@ -15,7 +15,7 @@ That's exactly the purpose of this library, is to pass custom options alongside 
 The library was designed to be added without further modification, you'll still use the same `HttpClient` but with one additional augment
 the `configure` method that takes the default options before choosing the HTTP method.
 
-1. First of all you need to create you custom options object
+1. First of all you need to create your custom options object
 
 ```
 interface CustomOptions {
@@ -23,7 +23,7 @@ interface CustomOptions {
 	defaultAuth: boolean;
 }
 ```
-2. in `app.module` you need to import `RequestOptionsModule` and add it to `imports` list in `NgModule`
+2. in `app.module` you need to import `RequestOptionsModule` and to add it to `imports` list in `NgModule`
 
 ```
 import { RequestOptionsModule } from  '@ezzabuzaid/ngx-request-options';
@@ -112,7 +112,7 @@ The `request.clone` method will return new request object with new metadata whic
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTg2NDA4MiwxNTUyNjM3MTQwLDMxNz
-AwNDQ2LC0xNDQ2NTU3MzM0LC04MjE1MTgyNzUsLTE5MzY3MDA3
-NzBdfQ==
+eyJoaXN0b3J5IjpbLTExMzY5MzgyMjcsLTE0NTg2NDA4MiwxNT
+UyNjM3MTQwLDMxNzAwNDQ2LC0xNDQ2NTU3MzM0LC04MjE1MTgy
+NzUsLTE5MzY3MDA3NzBdfQ==
 -->
