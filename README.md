@@ -1,7 +1,7 @@
 # Request Options
   [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ezzabuzaid/ngx-request-options/pulls) [![Downloads per month](https://flat.badgen.net/npm/dm/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) [![Version](https://flat.badgen.net/npm/v/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) [![License](https://flat.badgen.net/npm/license/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) 
 
-#### An elegant way to pass custom options to interceptor from http client
+### An elegant way to pass custom options through interceptor from the HTTP client
 
 In a most of the projects, you'll have default URL for your API's gateway that prefixed before sending the request to the backend to avoid adding it to every time and for some reasons you may have a request that doesn't need the default URL, so in this case, you need a way to not prefixing the URL.
 
@@ -80,6 +80,9 @@ export class UrlInterceptor implements HttpInterceptor {
 }
 ```
 
+### note
+
+
 ### Api's
 * RequestOptions
 	1.  `get(request: HttpRequest<any>, option: keyof  T)`
@@ -105,6 +108,7 @@ export class UrlInterceptor implements HttpInterceptor {
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1MjYzNzE0MCwzMTcwMDQ0NiwtMTQ0Nj
-U1NzMzNCwtODIxNTE4Mjc1LC0xOTM2NzAwNzcwXX0=
+eyJoaXN0b3J5IjpbLTkzNTY5Mzg4OSwxNTUyNjM3MTQwLDMxNz
+AwNDQ2LC0xNDQ2NTU3MzM0LC04MjE1MTgyNzUsLTE5MzY3MDA3
+NzBdfQ==
 -->
