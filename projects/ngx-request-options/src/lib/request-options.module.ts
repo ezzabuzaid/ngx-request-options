@@ -3,6 +3,7 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { HttpService, } from './http.service';
 import { RequestOptionsInterceptor } from './request-options.interceptor';
 import { REQUEST_OPTIONS_DEFAULT } from './types';
+import { RequestOptions } from 'dist/ngx-request-options/public-api';
 
 @NgModule()
 export class RequestOptionsModule {
@@ -22,6 +23,10 @@ export class RequestOptionsModule {
                 {
                     provide: REQUEST_OPTIONS_DEFAULT,
                     useValue: options
+                },
+                {
+                    provide: RequestOptions,
+                    useClass: RequestOptions
                 }
             ]
         };
