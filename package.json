@@ -4,10 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
+    "test-ci": "ng test --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "sync-readme": "cp ./README.md ./projects/ngx-request-options",
+    "package": "npm run build && cd ./dist/ngx-request-options",
+    "prepublish": "npm run build"
   },
   "private": true,
   "dependencies": {
