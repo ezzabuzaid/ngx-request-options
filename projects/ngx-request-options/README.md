@@ -1,24 +1,110 @@
-# NgxRequestOptions
+# Request Options
+  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ezzabuzaid/ngx-request-options/pulls) [![Downloads per month](https://flat.badgen.net/npm/dm/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) [![Version](https://flat.badgen.net/npm/v/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) [![License](https://flat.badgen.net/npm/license/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) 
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
+#### An elegant way to pass custom options to interceptor from http client
 
-## Code scaffolding
+In a most of the projects, you'll have default URL for your API's gateway that prefixed before sending the request to the backend to avoid adding it to every time and for some reasons you may have a request that doesn't need the default URL, so in this case, you need a way to not prefixing the URL.
 
-Run `ng generate component component-name --project ngx-request-options` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-request-options`.
-> Note: Don't forget to add `--project ngx-request-options` or else it will be added to the default project in your `angular.json` file. 
+That's just one case, you may also have to not send the Authentication header with a request
 
-## Build
+That's exactly the purpose of this library, is to pass custom options alongside the request and perform specific logic depend on it.
 
-Run `ng build ngx-request-options` to build the project. The build artifacts will be stored in the `dist/` directory.
+### installation
+`npm install @ezzabuzaid/ngx-request-options`
 
-## Publishing
+### Usage
+The library was designed to be added without further modification, you'll still use the same `HttpClient` but with one additional augment
+the `configure` method that takes the default options before choosing the HTTP method.
 
-After building your library with `ng build ngx-request-options`, go to the dist folder `cd dist/ngx-request-options` and run `npm publish`.
+1. First of all you need to create you custom options object
 
-## Running unit tests
+```
+interface CustomOptions {
+	defaultUrl:boolean;
+	defaultAuth: boolean;
+}
+```
+2. in `app.module` you need to import `RequestOptionsModule` and add it to `imports` list in `NgModule`
 
-Run `ng test ngx-request-options` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+import { RequestOptionsModule } from  '@ezzabuzaid/ngx-request-options';
 
-## Further help
+@NgModule({
+	imports: [
+		HttpClientModule,
+		RequestOptionsModule.forRoot<CustomOptions>({
+			// Default options to be applied on all requests
+			defaultAuth: true;
+			defaultUrl: true
+		})
+		]
+})
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  
+// Add those lines as they are
+declare module '@angular/common/http/http' {
+	// Augment HttpClient with the added `configure` method
+	export  interface  HttpClient {
+		/**
+		* Configure request options.
+		*/
+		configure(options: Partial<CustomOptions>): HttpClient;
+	}
+}
+```
+3. Inject `HttpClient` from `@angular/common/http` in a class then call the new `configure` method
+```
+@Injectable()
+export class MyService {
+	constructor(private http: HttpClient) { }
+	getData() {
+		return this.http
+			.configure({ defaultUrl:  false })
+			.get('endpoint');
+	}
+}
+```
+4. into an interceptor
+```
+import { RequestOptions } from '@ezzabuzaid/ngx-request-options';
+@Injectable()
+export class UrlInterceptor implements HttpInterceptor {
+	constructor(private requestOptions: RequestOptions<CustomOptions>) { }
+	intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+		let  url = request.url;
+		if (this.requestOptions.get(request, 'defaultUrl')) {
+			url = environment.endpointUrl + request.url;
+		}
+		return  next.handle(this.requestOptions.clone(request, { url }));
+	}
+}
+```
+
+### Api's
+* RequestOptions
+	1.  `get(request: HttpRequest<any>, option: keyof  T)`
+		* Get an option from the options that was assigned to the request
+	2.  `set(request: HttpRequest<any>, data: Partial<T>)` 
+		* Assign an options to a request
+	3. `delete(request: HttpRequest<any>)`
+		* Delete the request options
+	4. `clone(request: HttpRequest<any>, requestMetadata)`
+		* Clone the request with new metadata and reassign the options to it
+	5. `changeRequest(oldRequest: HttpRequest<any>, newRequest: HttpRequest<any>)`
+		*  Sometimes you need to call request.clone() to assign new values to request payload aka metadata thus you need to reassign the options again to the cloned request otherwise the options will be lost. call `RequestOptions.clone()` instead as shorter version
+		* `oldRequest` the previously used request
+		* `newRequest` the cloned request 
+
+
+## Developer
+##### [Ezzabuzaid](mailto:ezzabuzaid@hotmail.com)
+- [GitHub](https://github.com/ezzabuzaid)
+- [Linkedin](https://www.linkedin.com/in/ezzabuzaid)
+
+## License
+##### The MIT License (MIT)
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMzE3MDA0NDYsLTE0NDY1NTczMzQsLTgyMT
+UxODI3NSwtMTkzNjcwMDc3MF19
+-->

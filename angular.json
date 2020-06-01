@@ -42,9 +42,18 @@
           }
         }
       }
+<<<<<<< HEAD
     }},
   "cli": {
     "analytics": false
   },
   "defaultProject": "ngx-request-options"
+=======
+    }
+  },
+  "defaultProject": "ngx-request-options",
+  "cli": {
+    "analytics": false
+  }
+>>>>>>> 763a6670fa61407cd5ceb2a22fce60dc3fec2fb3
 }
