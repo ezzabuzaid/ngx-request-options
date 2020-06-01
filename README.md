@@ -51,7 +51,7 @@ declare module '@angular/common/http/http' {
 	}
 }
 ```
-Please make sure that the you call the `forRoot()`, and to avoid any new data
+Please make sure that the you call the `forRoot()`.
 
 3. Inject `HttpClient` from `@angular/common/http` in a class then call the new `configure` method
 ```
@@ -112,7 +112,7 @@ The `request.clone` method will return new request object with new metadata whic
 ##### The MIT License (MIT)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxMTIyNDI2NywxNTUyNjM3MTQwLDMxNz
+eyJoaXN0b3J5IjpbLTE0NTg2NDA4MiwxNTUyNjM3MTQwLDMxNz
 AwNDQ2LC0xNDQ2NTU3MzM0LC04MjE1MTgyNzUsLTE5MzY3MDA3
 NzBdfQ==
 -->
