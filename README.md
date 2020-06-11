@@ -126,13 +126,9 @@ For more information on SemVer, please visit http://semver.org.
 ## License
 ##### The MIT License (MIT)
 
-# Built with love <3- [Linkedin](https://www.linkedin.com/in/ezzabuzaid)
-
-## License
-##### The MIT License (MIT)
-
+# Built with love <3
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDgwMTA2MTUsLTE0NTg2NDA4MiwxNT
+eyJoaXN0b3J5IjpbLTE2MTU0MDc3NzcsLTE0NTg2NDA4MiwxNT
 UyNjM3MTQwLDMxNzAwNDQ2LC0xNDQ2NTU3MzM0LC04MjE1MTgy
 NzUsLTE5MzY3MDA3NzBdfQ==
 -->
