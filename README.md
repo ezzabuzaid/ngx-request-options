@@ -1,5 +1,5 @@
 # Request Options
-  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svm/zzabuzaid/ngx-request-options/pulls) [![Downloads per month](https://flat.badgen.net/npm/dm/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) [![Version](https://flat.badgen.net/npm/v/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) [![License](https://flat.badgen.net/npm/license/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) 
+  ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svm/ezzabuzaid/ngx-request-options/pulls) [![Downloads per month](https://flat.badgen.net/npm/dm/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) [![Version](https://flat.badgen.net/npm/v/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) [![License](https://flat.badgen.net/npm/license/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) 
 
 ### An elegant way to pass custom options through interceptor from the HTTP client
 
@@ -128,7 +128,7 @@ For more information on SemVer, please visit http://semver.org.
 
 # Built with love <3
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTU0MDc3NzcsLTE0NTg2NDA4MiwxNT
-UyNjM3MTQwLDMxNzAwNDQ2LC0xNDQ2NTU3MzM0LC04MjE1MTgy
-NzUsLTE5MzY3MDA3NzBdfQ==
+eyJoaXN0b3J5IjpbMTgyNjk5MzY5NywtMTQ1ODY0MDgyLDE1NT
+I2MzcxNDAsMzE3MDA0NDYsLTE0NDY1NTczMzQsLTgyMTUxODI3
+NSwtMTkzNjcwMDc3MF19
 -->
