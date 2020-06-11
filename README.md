@@ -1,6 +1,8 @@
 # Request Options
   ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svm/ezzabuzaid/ngx-request-options/pulls) [![Downloads per month](https://flat.badgen.net/npm/dm/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) [![Version](https://flat.badgen.net/npm/v/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) [![License](https://flat.badgen.net/npm/license/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) 
 
+Don't forget to follow the project's author, [Ezz](https://github.com/ezzabuzaid), and consider starring the project to show your ❤️ and support.
+
 ### An elegant way to pass custom options through interceptor from the HTTP client
 
 In a most of the projects, you'll have default URL for your API's gateway that prefixed before sending the request to the backend to avoid adding it to every time and for some reasons you may have a request that doesn't need the default URL, so in this case, you need a way to not prefixing the URL.
@@ -128,7 +130,7 @@ For more information on SemVer, please visit http://semver.org.
 
 # Built with love <3
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNjk5MzY5NywtMTQ1ODY0MDgyLDE1NT
-I2MzcxNDAsMzE3MDA0NDYsLTE0NDY1NTczMzQsLTgyMTUxODI3
-NSwtMTkzNjcwMDc3MF19
+eyJoaXN0b3J5IjpbLTE0MzgxODIwMjIsLTE0NTg2NDA4MiwxNT
+UyNjM3MTQwLDMxNzAwNDQ2LC0xNDQ2NTU3MzM0LC04MjE1MTgy
+NzUsLTE5MzY3MDA3NzBdfQ==
 -->
