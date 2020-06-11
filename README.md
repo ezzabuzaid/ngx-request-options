@@ -1,5 +1,5 @@
 # Request Options
-  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ezzabuzaid/ngx-request-options/pulls) [![Downloads per month](https://flat.badgen.net/npm/dm/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) [![Version](https://flat.badgen.net/npm/v/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) [![License](https://flat.badgen.net/npm/license/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) 
+  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svm/zzabuzaid/ngx-request-options/pulls) [![Downloads per month](https://flat.badgen.net/npm/dm/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) [![Version](https://flat.badgen.net/npm/v/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) [![License](https://flat.badgen.net/npm/license/@ezzabuzaid/ngx-request-options)](https://www.npmjs.com/package/@ezzabuzaid/ngx-request-options) 
 
 ### An elegant way to pass custom options through interceptor from the HTTP client
 
@@ -110,22 +110,7 @@ Don't hesitate to open issues and make a pull request to help improve code
 3.  Commit your changes: `git commit -m 'Add some feature'`
 4.  Push to the branch: `git push origin my-new-feature`
 5.  Submit a pull request :D
-  Developer
-##### [Ezzabuzaid](mailto:ezzabuzaid@hotmail.com)
-- [GitHub](https://github.com/ezzabuzaid)
-- [Linkedin](https://www.linkedin.com/in/ezzabuzaid)
-
-## License
-##### The MIT License (MIT)
-
-
-
-## Versioning
-
-This library will be maintained under the semantic versioning guidelines.
-Releases will be numbered with the following format:
-`<major>.<minor>.<patch>`
-For more information on SemVer, please visit http://semver.org.
+#### it would be nice to put your touches
 
 
 ## Developer
@@ -137,12 +122,8 @@ For more information on SemVer, please visit http://semver.org.
 ## License
 ##### The MIT License (MIT)
 
-### TODO
-- Add Support for Async validators
-
-##### Built with love <3
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY1MDkxMzg1LC0xNDU4NjQwODIsMTU1Mj
-YzNzE0MCwzMTcwMDQ0NiwtMTQ0NjU1NzMzNCwtODIxNTE4Mjc1
-LC0xOTM2NzAwNzcwXX0=
+eyJoaXN0b3J5IjpbLTEwNTg1MDYyMDgsLTE0NTg2NDA4MiwxNT
+UyNjM3MTQwLDMxNzAwNDQ2LC0xNDQ2NTU3MzM0LC04MjE1MTgy
+NzUsLTE5MzY3MDA3NzBdfQ==
 -->
