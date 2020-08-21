@@ -3,7 +3,7 @@
 
 Don't forget to follow the project's author, [Ezz](https://github.com/ezzabuzaid), and consider starring the project to show your ❤️ and support.
 
-### An elegant way to pass custom options through interceptor from the HTTP client
+### A sophisticated way to pass custom options through interceptors from the HTTP client instnace
 
 In a most of the projects, you'll have default URL for your API's gateway that prefixed before sending the request to the backend to avoid adding it to every time and for some reasons you may have a request that doesn't need the default URL, so in this case, you need a way to not prefixing the URL.
 You may also have to not send the Authentication header with a request
@@ -104,6 +104,8 @@ The `request.clone` method will return new request object with new metadata whic
 		* `oldRequest` the previously used request
 		* `newRequest` the cloned request 
 
+* REQUEST_OPTIONS_DEFAULT
+you can use this injection token to retrieve the global options that have set in `forRoot` method
 
 ## Contributing
 Don't hesitate to open issues and make a pull request to help improve code
