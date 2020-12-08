@@ -2,11 +2,11 @@ import { HttpClient, HttpHandler, HTTP_INTERCEPTORS } from '@angular/common/http
 import { Inject, Injectable, Injector, Optional } from '@angular/core';
 import { RequestOptions } from './request-options.service';
 import { ModifiableInterceptor, Partial, REQUEST_OPTIONS_DEFAULT } from './types';
-import deepmerge from 'deepmerge';
+import { all as merge } from 'deepmerge';
 
 @Injectable()
 export class HttpService<T> extends HttpClient {
-    private options = null;
+    private _options = null;
     constructor(
         httpHandler: HttpHandler,
         private injcetor: Injector,
@@ -24,16 +24,16 @@ export class HttpService<T> extends HttpClient {
     // @ts-ignore
     request(...args: any[]) {
         const url = args[1];
-        const options = deepmerge.all([this.defaultOptions ?? {}, this.options ?? {}]);
+        const options = merge([this.defaultOptions ?? {}, this._options ?? {}]);
         this.requestOptions.set(url, options);
-        this.options = null;
+        this._options = null;
         // @ts-ignore
         return super.request(...args);
     }
 
     // @ts-ignore
     configure(options: Partial<T>) {
-        this.options = options;
+        this._options = options;
         return this;
     }
 

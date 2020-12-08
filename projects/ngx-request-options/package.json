@@ -1,11 +1,11 @@
 {
   "peerDependencies": {
     "@angular/common": ">=9.0.7",
-    "@angular/core": ">=9.0.7"
+    "@angular/core": ">=9.0.7",
+    "deepmerge": "^4.2.2"
   },
   "dependencies": {
-    "tslib": "^1.10.0",
-    "deepmerge": "^4.2.2"
+    "tslib": "^1.10.0"
   },
   "name": "@ezzabuzaid/ngx-request-options",
   "version": "0.1.0",
