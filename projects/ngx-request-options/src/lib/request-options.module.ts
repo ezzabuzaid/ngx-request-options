@@ -7,7 +7,7 @@ import { RequestOptions } from './request-options.service';
 
 @NgModule()
 export class RequestOptionsModule {
-    static forRoot<T>(options?: T): ModuleWithProviders {
+    static forRoot<T>(options?: T): ModuleWithProviders<RequestOptionsModule> {
         return {
             ngModule: RequestOptionsModule,
             providers: [

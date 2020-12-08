@@ -6,20 +6,22 @@ type Parameter<T extends (args: any) => any> = T extends (args: infer P) => any 
 
 @Injectable()
 export class RequestOptions<T> {
-    private optionsMap = new WeakMap<HttpRequest<any>, Partial<T>>();
+    private optionsMap = new Map<string, Partial<T>>();
 
     /**
      * Retrive the option value
      */
     get<K extends keyof T>(request: HttpRequest<any>, option: K) {
-        return this.optionsMap.get(request)[option];
+        return this.optionsMap.get(request.url)[option];
     }
 
     /**
      * Add an options to request
+     * 
+     * @internal
      */
-    set(request: HttpRequest<any>, data: Partial<T>) {
-        this.optionsMap.set(request, data);
+    set(url: string, data: Partial<T>) {
+        this.optionsMap.set(url, data);
         return this;
     }
 
@@ -27,7 +29,7 @@ export class RequestOptions<T> {
      * Delete the request options
      */
     delete(request: HttpRequest<any>) {
-        this.optionsMap.delete(request);
+        this.optionsMap.delete(request.url);
         return this;
     }
 
@@ -44,10 +46,12 @@ export class RequestOptions<T> {
      *
      * @param oldRequest the previously used request
      * @param newRequest the cloned request
+     * 
+     * @internal
      */
     changeRequest(oldRequest: HttpRequest<any>, newRequest: HttpRequest<any>) {
-        const options = this.optionsMap.get(oldRequest);
-        this.set(newRequest, options);
+        const options = this.optionsMap.get(oldRequest.url);
+        this.set(newRequest.url, options);
         return newRequest;
     }
 
