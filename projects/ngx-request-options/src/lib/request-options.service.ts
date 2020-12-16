@@ -26,14 +26,6 @@ export class RequestOptions<T> {
     }
 
     /**
-     * Delete the request options
-     */
-    delete(request: HttpRequest<any>) {
-        this.optionsMap.delete(request.url);
-        return this;
-    }
-
-    /**
      * Clone the request with new metadata and reassign the options to it
      */
     clone(request: HttpRequest<any>, payload: Parameter<typeof request.clone>) {

@@ -1,9 +1,8 @@
-import { HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import { HttpService, } from './http.service';
-import { RequestOptionsInterceptor } from './request-options.interceptor';
-import { REQUEST_OPTIONS_DEFAULT } from './types';
+import { HttpService } from './http.service';
 import { RequestOptions } from './request-options.service';
+import { REQUEST_OPTIONS_DEFAULT } from './types';
 
 @NgModule()
 export class RequestOptionsModule {
@@ -11,11 +10,6 @@ export class RequestOptionsModule {
         return {
             ngModule: RequestOptionsModule,
             providers: [
-                {
-                    provide: HTTP_INTERCEPTORS,
-                    useClass: RequestOptionsInterceptor,
-                    multi: true
-                },
                 {
                     provide: HttpClient,
                     useClass: HttpService

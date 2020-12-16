@@ -1,24 +1,19 @@
-import { HttpClient, HttpHandler, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { Inject, Injectable, Injector, Optional } from '@angular/core';
-import { RequestOptions } from './request-options.service';
-import { ModifiableInterceptor, Partial, REQUEST_OPTIONS_DEFAULT } from './types';
+import { HttpClient, HttpHandler } from '@angular/common/http';
+import { Inject, Injectable, Optional } from '@angular/core';
 import { all as merge } from 'deepmerge';
+import { RequestOptions } from './request-options.service';
+import { Partial, REQUEST_OPTIONS_DEFAULT } from './types';
 
 @Injectable()
 export class HttpService<T> extends HttpClient {
     private _options = null;
     constructor(
         httpHandler: HttpHandler,
-        private injcetor: Injector,
         private requestOptions: RequestOptions<any>,
         @Optional() @Inject(REQUEST_OPTIONS_DEFAULT) private defaultOptions: Partial<any>
 
     ) {
         super(httpHandler);
-    }
-
-    get interceptors(): ModifiableInterceptor[] {
-        return this.injcetor.get(HTTP_INTERCEPTORS) as any;
     }
 
     // @ts-ignore
