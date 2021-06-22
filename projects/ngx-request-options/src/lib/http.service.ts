@@ -3,6 +3,7 @@ import { Inject, Injectable, Optional } from '@angular/core';
 import { all as merge } from 'deepmerge';
 import { RequestOptions } from './request-options.service';
 import { Partial, REQUEST_OPTIONS_DEFAULT } from './types';
+import { isPlainObject } from 'is-plain-object';
 
 @Injectable()
 export class HttpService<T> extends HttpClient {
@@ -19,7 +20,9 @@ export class HttpService<T> extends HttpClient {
     // @ts-ignore
     request(...args: any[]) {
         const url = args[1];
-        const options = merge([this.defaultOptions ?? {}, this._options ?? {}]);
+        const options = merge([this.defaultOptions ?? {}, this._options ?? {}], {
+            isMergeableObject: isPlainObject
+        });
         this.requestOptions.set(url, options);
         this._options = null;
         // @ts-ignore
