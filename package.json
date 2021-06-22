@@ -4,14 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
     "test": "ng test",
     "test-ci": "ng test --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "sync-readme": "cp ./README.md ./projects/ngx-request-options",
-    "package": "npm run build && cd ./dist/ngx-request-options",
-    "prepublish": "npm run build"
+    "build": "ng build --prod",
+    "prebuild": "cpy 'README.md' ./projects/ngx-request-options --no-overwrite --parents"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~9.0.2",
     "@angular/router": "~9.0.2",
     "deepmerge": "^4.2.2",
+    "is-plain-object": "^5.0.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
@@ -49,6 +48,8 @@
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
-    "typescript": "~3.7.5"
+    "typescript": "~3.7.5",
+    "cpy-cli": "^3.1.1",
+    "del-cli": "^3.0.1"
   }
 }

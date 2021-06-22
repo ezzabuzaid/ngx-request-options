@@ -10,18 +10,7 @@ on:
     branches: [master]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: npm ci
-      - run: npm run sync-readme
-
-  publish-npm:
-    needs: build
+  build-publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -29,7 +18,8 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
+      - run: npm install
+      - run: npm run build
       - run: npm publish ./dist/ngx-request-options
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
