@@ -8,12 +8,12 @@
     "tslib": "^1.10.0"
   },
   "name": "@ezzabuzaid/ngx-request-options",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "bugs": {
     "email": "ezzabuzaid@hotmail.com",
     "url": "https://github.com/ezzabuzaid/ngx-request-options/issues"
   },
-  "description": "Allows to pass custom options to http interceptors",
+  "description": "Pass custom options to http interceptors",
   "keywords": [
     "Angular",
     "http",
